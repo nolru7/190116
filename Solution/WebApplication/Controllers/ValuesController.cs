@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using ClassLibrary1;
+using ClassLibrary;
 using MySql.Data.MySqlClient;
 
 
@@ -17,8 +17,7 @@ namespace WebApplication.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            Class1 c1 = new Class1();
-            Console.WriteLine(c1.GetInt());
+            
             Database db = new Database();
 
             MySqlConnection conn = db.GetConnection();
